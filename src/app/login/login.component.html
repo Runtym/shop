@@ -1,0 +1,9 @@
+<div *ngIf="!isLogin">
+  아이디 : <input type="text" [(ngModel)]="user.uiId"><br>
+  비번 : <input type="password" [(ngModel)]="user.uiPwd"><br>
+  <button (click)="doLogin()">로그인</button>
+</div>
+
+<div *ngIf="isLogin">
+  로그인 완료
+</div>

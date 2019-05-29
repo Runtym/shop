@@ -1,0 +1,9 @@
+<p>
+  main works!
+</p>
+<div *ngIf="isLogin">
+<button (click)="doLogout()">로그아웃</button>
+</div>
+<div *ngIf="!isLogin">
+<button (click)="goPage('login')">로그인하러가기</button>
+</div>
