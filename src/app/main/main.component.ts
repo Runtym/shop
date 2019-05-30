@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class MainComponent implements OnInit {
   isLogin:boolean = false;
   constructor(private _router:Router) { 
-    if(localStorage.getItem('id')){
+    if(localStorage.getItem('tokken')){
       console.log('오 너 로그인 되어있꾸나');
       this.isLogin = true;
     }else{
