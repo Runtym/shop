@@ -6,6 +6,8 @@ import { TestComponent } from './test/test.component';
 import { RouterGuardService } from './router-guard.service';
 import { UserComponent } from './user/user.component';
 import { SigninComponent } from './signin/signin.component';
+import { ArrowFuncComponent } from './arrow-func/arrow-func.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {
@@ -14,8 +16,7 @@ const routes: Routes = [
   },
   {
     path:'',  
-    component:MainComponent,
-    canActivate:[RouterGuardService]
+    component:ArrowFuncComponent
   },
   {
     path:'test',
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path:'signin',
     component:SigninComponent
+  },
+  {
+    path:'parent',
+    component:ParentComponent
   }
 ];
 

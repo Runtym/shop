@@ -1,10 +1,30 @@
-<div *ngIf="!isLogin">
-  아이디 : <input type="text" [(ngModel)]="user.uiId"><br>
-  비번 : <input type="password" [(ngModel)]="user.uiPwd"><br>
-  <button (click)="doLogin()">로그인</button>
+<div id="loginDiv" *ngIf="!user.tokken">
+  <h1 class="form-heading">로그인</h1>
+  <div class="login-form">
+      <div class="main-div">
+          <div class="panel">
+              <h2>사용자 로그인</h2>
+              <p>아이디와 비밀번호를 입력해주세요</p>
+          </div>
+          <div>
+              <div class="form-group">
+                  <input type="text" class="form-control" name="id1"  id="id1" placeholder="아이디"  [(ngModel)]="user.uiId"  >
+              </div>
+
+              <div class="form-group">
+                  <input type="password" class="form-control"  placeholder="비밀번호"  [(ngModel)]="user.uiPwd">
+              </div>
+              <div class="forgot">
+                  <a href="reset.html">비밀번호를 잊으셨나요?</a>
+              </div>
+              <button type="submit" class="btn btn-primary" (click)="doLogin()">Login</button>
+          </div>
+      </div>
+      <p class="botto-text"> Designed by Sunil Rajput</p>
+  </div>
 </div>
 
-<div *ngIf="isLogin">
-  로그인 완료
+<div id="logoutDiv" *ngIf="user.tokken">
+  {{user.name}}님 안녕하세요<br>
+  <button (click)="doLogout()">로그아웃</button>
 </div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jUSIYnIR8ag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

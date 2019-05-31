@@ -13,6 +13,12 @@ export class LoginComponent implements OnInit {
   isLogin:boolean = false;
 
   constructor(private _router:Router,private _ls:LoginService) {
+    var uiId = localStorage.getItem('uiId');
+    var tokken = localStorage.getItem('tokken');
+    if(tokken){
+      this.user.uiId = uiId;
+      this.user.tokken = tokken;
+    }
   }
   ngOnInit() {}
   doLogin(){

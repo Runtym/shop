@@ -4,4 +4,5 @@ export class User {
     uiNo:number;
     uiAge:number;
     tokken:string;
+    checked:string;
 }
