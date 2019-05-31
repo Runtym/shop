@@ -3,3 +3,6 @@
   이름 : {{cUser.name}}<br>
   아이디 : {{cUser.id}}<br>
 </div>
+<input type="text" [(ngModel)]="user.uiId">
+<input type="password" [(ngModel)]="user.uiPwd">
+<button (click)="test()">Child버튼</button>

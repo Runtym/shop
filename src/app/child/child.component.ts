@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { User } from '../user';
+
 
 @Component({
   selector: 'app-child',
@@ -10,11 +12,15 @@ export class ChildComponent implements OnInit {
   cStr:string;
   @Input()
   cUser:any;
+  @Output() issue = new EventEmitter<User>();
+  user:User = new User();
 
   cTest:string = 'cTest';
   constructor() { }
 
   ngOnInit() {
   }
-
+  test(){
+    this.issue.emit(this.user);
+  }
 }

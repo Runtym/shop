@@ -2,5 +2,6 @@
   parent works!
 </p>
 <button (click)="changePStr()">유저클릭</button>
-<app-child [cStr]="pStr" [cUser]="user"></app-child>
+<app-child [cStr]="pStr" [cUser]="user"
+(issue)="receive($event)"></app-child>
 {{child.cTest}}

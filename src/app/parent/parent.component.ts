@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
+import { User } from '../user';
 
 @Component({
   selector: 'app-parent',
@@ -14,10 +15,13 @@ export class ParentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
   changePStr(){
     this.user.no=1;
     this.child.cTest='ttt';
   }
-
+  receive(user:User){
+    console.log(user);
+  }
 }
